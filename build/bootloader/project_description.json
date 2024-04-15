@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader/subproject",
+    "build_dir":          "C:/Users/marco/eclipse-workspace/fall_detection_client/build/bootloader",
+    "config_file":        "C:/Users/marco/eclipse-workspace/fall_detection_client/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4-dirty",
+    "target":             "esp32",
+    "rev":                "0",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/efuse/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp32/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_common/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_hw_support/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_system/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/freertos/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/hal/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/log/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/newlib/Kconfig;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader/Kconfig.projbuild;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_rom/Kconfig.projbuild;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esptool_py/Kconfig.projbuild;C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader_support", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/efuse", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp32", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_common", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_hw_support", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_rom", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esp_system", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/esptool_py", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/freertos", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/hal", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/log", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader/subproject/main", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/bootloader/subproject/components/micro-ecc", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/newlib", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/partition_table", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/soc", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/spi_flash", "C:/Users/marco/eclipse-workspace/espressif/esp-idf-v4.4/esp-idf-v4.4/components/xtensa", "" ]
+}
