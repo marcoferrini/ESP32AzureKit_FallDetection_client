@@ -87,6 +87,16 @@ static struct gattc_profile_inst gl_profile_tab[PROFILE_NUM] = {
     },
 };
 
+/**
+ * @brief GATT client callback function for handling various BLE events.
+ * 
+ * This function handles registration events and routes other GATT client events
+ * to their respective profile-specific callback functions based on the GATT interface provided.
+ * 
+ * @param event Type of GATT client event.
+ * @param gattc_if GATT client interface, identifying the client instance.
+ * @param param Pointer to parameter union holding event-specific data.
+ */
 static void esp_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_ble_gattc_cb_param_t *param)
 {
     /* If event is register event, store the gattc_if for each profile */
@@ -107,6 +117,15 @@ static void esp_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp
     }
 }
 
+/**
+ * @brief GAP callback function for handling GAP-related BLE events.
+ * 
+ * This function handles events related to BLE scanning, such as setting scan parameters,
+ * starting scanning, and processing scan results.
+ * 
+ * @param event Type of GAP event.
+ * @param param Pointer to parameter union holding event-specific data.
+ */
 static void esp_gap_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param){	//Funzione chiamata dal driver bluetooth ogni volta che si verifica un evento
 
 	switch (event) {
@@ -169,6 +188,16 @@ static void esp_gap_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *par
 
 }
 
+/**
+ * @brief Profile A (fall detection) specific GATT client callback.
+ * 
+ * Handles specific events for Profile A (fall detection), such as registration, opening connections,
+ * service discovery, characteristic operations, and notifications.
+ * 
+ * @param event GATT client event type.
+ * @param gattc_if GATT client interface for the event.
+ * @param param Pointer to parameter union for the event.
+ */
 static void gattc_A_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_ble_gattc_cb_param_t *param){
 	switch (event) {
 
@@ -402,7 +431,12 @@ static void gattc_A_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_b
 //
 ///////////////////////////////////////////////////
 
-//button call back
+/**
+ * @brief Callback function for a button press.
+ *
+ * This function is called when a user-defined button is pressed. It checks if a connection is established
+ * and writes a characteristic to reset the fall_detection.
+ */
 void btn_cb() {
 	uint8_t fall_detected= 0; 
 	uint8_t tmp; 
@@ -419,6 +453,13 @@ void btn_cb() {
 	return; 		
 }
 
+/**
+ * @brief Initializes the button used in the application.
+ *
+ * This function sets up a button on a specified GPIO pin using the iot_button.h library. 
+ * It logs the start and completion of the initialization process, and sets a callback function
+ * to handle button tap events.
+ */
 void button_init(){
 	ESP_LOGI(CLIENT_TAG, "STARTED: button initialization"); 
 	btn_handle = iot_button_create((gpio_num_t)BUTTON_IO_NUM, BUTTON_ACTIVE_LEVEL);
@@ -431,6 +472,13 @@ void button_init(){
 
 /////////////////////////////////////////
 
+/**
+ * @brief Main application function to setup sensors, display, Bluetooth Low Energy (BLE) and tasks.
+ *
+ * This function is responsible for initializing the hardware and software components
+ * used in the application. It sets up a data queue, button, I2C for sensor communication,
+ * an OLED display, and the Bluetooth Low Energy (BLE) subsystem. It also creates the display task.
+ */
 void app_main(void)
 {
 

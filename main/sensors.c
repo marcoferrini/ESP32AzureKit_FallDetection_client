@@ -38,6 +38,15 @@ static button_handle_t btn_handle = NULL;
 //I2C CONFIG FUCNCTIONS
 //
 ///////////////////////////////////////////////////
+
+/**
+ * @brief Initializes the I2C master.
+ *
+ * Sets up the I2C master configuration on the designated GPIO pins with pull-up resistors enabled.
+ * It configures the I2C communication speed and initializes the I2C driver for the master controller.
+ *
+ * @return esp_err_t Returns ESP_OK if initialization is successful, otherwise it returns an error code indicating what went wrong during initialization.
+ */
 static i2c_config_t i2c_conf;
 
 static esp_err_t i2c_master_init(void)
@@ -65,7 +74,13 @@ static esp_err_t i2c_master_init(void)
 //
 ///////////////////////////////////////////////////
 
-
+/**
+ * @brief Task to monitor and display fall detection status on an OLED display.
+ *
+ * This task continuously checks a queue for the fall detection status and updates
+ * an OLED display based on the status received. It shows "fall detected" if a fall
+ * is detected and "NO fall" otherwise. The screen is updated every second.
+ */
 void display_task(){
 	uint8_t fall_detected = 0;
 	while (1)
@@ -89,9 +104,6 @@ void display_task(){
 		SSD1306_UpdateScreen();
     	vTaskDelay(1000 / portTICK_PERIOD_MS);  
 	}
-	
-	
-	
 	    
 }
 
