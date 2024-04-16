@@ -87,6 +87,8 @@ static struct gattc_profile_inst gl_profile_tab[PROFILE_NUM] = {
     },
 };
 
+
+
 /**
  * @brief GATT client callback function for handling various BLE events.
  * 
@@ -116,6 +118,8 @@ static void esp_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp
       	}
     }
 }
+
+
 
 /**
  * @brief GAP callback function for handling GAP-related BLE events.

@@ -12,6 +12,8 @@ The main folder contains the sorce code.
 - `ssd1306.c` API for esp32 azure iot kit display ssd1306
 - `fonts.c` structures definition for ssd1306
 
+## Documentation
+In the files `main.c` and `sensors.c` Doxygen comments have been used. 
 
 ## Author 
 Marco Ferrini
